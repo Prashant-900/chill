@@ -127,7 +127,7 @@ export default function Home() {
   return (
     <>
       <Backgorund open={()=>setshowmessgae(true)}/>
-      <Sendmessage friends={friends} own={userdata}/>
+      {token &&<Sendmessage friends={friends} own={userdata}/>}
       {showmessgae && <Messagepopup
           images={userdata?.messages?.[0]?.image || []}
           text={userdata?.messages?.[0]?.text || ""}
