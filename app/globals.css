@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.transition-opacity {
+    transition: opacity 1s ease-in-out;
+  }
+
+  @keyframes stopMotionRotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(30deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(-30deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .stop-motion-rotate {
+    animation: stopMotionRotate 2s infinite steps(1);
+  }
+  /* Global Glassy Pink Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 182, 193, 0.8); /* Pink glassy color */
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Glassy border effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 105, 135, 0.9); /* Slightly darker pink on hover */
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* No visible background */
+}
